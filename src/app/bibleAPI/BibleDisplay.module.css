@@ -1,0 +1,22 @@
+.verseScroll {
+  text-align: left;
+  line-height: 1.8;
+}
+
+.chapterHeading {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.chapterBlock {
+  margin-bottom: 2.5rem;
+}
+
+.superscript {
+  font-size: 0.65em;
+}
+
+.referenceTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}

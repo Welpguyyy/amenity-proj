@@ -1,0 +1,162 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Segoe+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI+Variable:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI+Historic:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI+Emoji:wght@400&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Global CSS */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #0B1532;
+  font-size: 16px;
+  /* Base font size */
+  font-family: 'Segoe UI Variable', 'Segoe UI Emoji', sans-serif;
+}
+
+body {
+  color: #f5f0e9;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Enhanced Font size classes */
+.textXL {
+  font-size: 1.25rem;
+  /* 20px */
+  line-height: 1.5;
+}
+
+.textLarge {
+  font-size: 1.125rem;
+  /* 18px */
+  line-height: 1.5;
+}
+
+.textMedium {
+  font-size: 1rem;
+  /* 16px */
+  line-height: 1.5;
+}
+
+.textSmall {
+  font-size: 0.875rem;
+  /* 14px */
+  line-height: 1.5;
+}
+
+.textXS {
+  font-size: 0.75rem;
+  /* 12px */
+  line-height: 1.5;
+}
+
+/* Font weight classes */
+.fontRegular {
+  font-weight: 400;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.fontSemiBold {
+  font-weight: 600;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+/* Responsive font classes */
+.headingLarge {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.headingMedium {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.headingSmall {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.paragraph {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+}
+
+.caption {
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  line-height: 1.5;
+}
+
+/* Remove any default browser outlines */
+:focus {
+  outline: none;
+}
+
+/* Ensure the root element fills the viewport */
+#__next,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom styles for the amenity alert popup */
+.amenity-alert-popup {
+  border-radius: 16px;
+  font-family: 'Segoe UI Variable', 'Segoe UI Emoji', sans-serif;
+  background: #2563eb !important; /* Amenity blue, override default */
+  color: #fff !important; /* White text for contrast */
+}
+
+.amenity-alert-title {
+  color: #fff !important; /* White title for contrast on blue */
+}
+
+.amenity-alert-confirm {
+  background-color: #1e40af !important; /* Darker blue for button */
+  color: #fff !important;
+  border: none !important;
+}
+
+.amenity-alert-cancel {
+  background-color: #3b82f6 !important; /* Lighter blue for cancel */
+  color: #fff !important;
+  border: none !important;
+}

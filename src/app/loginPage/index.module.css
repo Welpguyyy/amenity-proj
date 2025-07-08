@@ -1,0 +1,498 @@
+/* Main page container */
+.pageContainer {
+	width: 100vw;
+	min-height: 100vh;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(4, 21, 40, 0.8) 90%, rgba(0, 0, 0, 1) 100%), url('/images/background.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/* Auth container - holds both left and right boxes */
+.authContainer {
+	display: flex;
+	width: 100%;
+	max-width: 1000px;
+	min-height: 450px;
+	background-color: transparent;
+	overflow: hidden;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+	transform: translateY(0px);
+}
+
+/* Left box - contains logo and branding */
+.leftBox {
+	flex: 1.2;
+	background-color: #041528;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+	border-radius: 40px 0 0 0;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.3);
+	max-width: 420px;
+	min-height: 450px;
+	padding-bottom: 40px;
+}
+
+/* Logo container */
+.logoContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+/* Logo wrapper to maintain proportions */
+.logoWrapper {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
+}
+
+/* Logo image */
+.logo {
+	width: 260px;
+	height: auto;
+	margin-bottom: 0;
+	filter: drop-shadow(0 0 20px rgba(224, 197, 143, 0.4));
+}
+
+/* Brand name */
+.brandName {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: 'Segoe Script', cursive, 'Segoe UI', sans-serif;
+}
+
+/* Bottom text in left box */
+.bottomText {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.bottomText p {
+	color: #ffffff;
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.alreadyAccountText {
+	color: #e0c58f !important;
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.bottomText a {
+	color: #e0c58f;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.bottomText a:hover {
+	text-decoration: underline;
+}
+
+.linkButton {
+	background: none;
+	border: none;
+	color: #e0c58f;
+	font-size: 0.9rem;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.linkButton:hover {
+	opacity: 0.8;
+}
+
+/* Right box - contains forms */
+.rightBox {
+	flex: 0.8;
+	background-color: rgba(27, 38, 59, 0.75);
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.3);
+	max-width: 320px;
+	min-height: 450px;
+}
+
+.loginTitle,
+.signUpTitle {
+	color: #e0c58f;
+	font-size: 2.2rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Form container */
+.formContainer {
+	width: 100%;
+	max-width: 300px;
+}
+
+.formContainer form {
+	width: 100%;
+}
+
+.inputGroup {
+	margin-bottom: 12px;
+}
+
+.passwordRow {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 15px;
+}
+
+.passwordColumn {
+	flex: 1;
+}
+
+.formContainer label {
+	display: block;
+	color: #ffffff;
+	font-size: 0.9rem;
+	margin-bottom: 6px;
+	font-weight: normal;
+}
+
+.formContainer input {
+	width: 100%;
+	padding: 8px 14px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+	font-size: 0.85rem;
+	transition: all 0.3s;
+}
+
+.formContainer input:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(224, 197, 143, 0.2);
+}
+
+.passwordInput {
+	position: relative;
+	width: 100%;
+}
+
+.togglePassword {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: #e0c58f;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0;
+	transition: color 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 5;
+}
+
+.hidePasswordIcon,
+.showPasswordIcon {
+	color: #e0c58f;
+	opacity: 0.9;
+	font-size: 14px;
+}
+
+.togglePassword:hover .hidePasswordIcon,
+.togglePassword:hover .showPasswordIcon {
+	opacity: 1;
+}
+
+.formOptions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.rememberMe {
+	display: flex;
+	align-items: center;
+}
+
+.rememberMe input {
+	width: auto;
+	margin-right: 8px;
+}
+
+.rememberMe label {
+	margin-bottom: 0;
+	font-size: 0.85rem;
+}
+
+.yellowText {
+	color: #e0c58f !important;
+}
+
+.forgotPassword {
+	color: #e0c58f;
+	font-size: 0.85rem;
+	text-decoration: none;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.forgotPassword:hover {
+	text-decoration: underline;
+}
+
+.loginLinkWrapper {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.alreadyHaveAccount {
+	color: #e0c58f;
+	font-size: 0.9rem;
+}
+
+.loginLink {
+	color: #e0c58f;
+	font-size: 0.9rem;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.googleButtonWrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.googleSignInButton {
+	background: none;
+	border: none;
+	color: #e0c58f;
+	cursor: pointer;
+	font-size: 0.9rem;
+	padding: 0;
+	transition: all 0.3s;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.googleIcon {
+	font-size: 18px;
+	margin-right: 2px;
+}
+
+.googleSignInButton:hover {
+	text-decoration: underline;
+}
+
+.loginButton,
+.createAccountButton {
+	width: 100%;
+	padding: 10px;
+	background-color: #ffffff;
+	color: #0d1b2a;
+	border: none;
+	border-radius: 30px;
+	font-size: 0.85rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.loginButton:hover,
+.loginButton:active,
+.createAccountButton:hover,
+.createAccountButton:active {
+	background-color: #ffdb9e;
+	transform: translateY(-2px);
+}
+
+.loginButton {
+	margin-bottom: 12px;
+}
+
+.createAccountButton {
+	margin-bottom: 5px;
+}
+
+.errorMessage {
+	background-color: rgba(255, 87, 87, 0.1);
+	border-left: 3px solid #ff5757;
+	color: #ff5757;
+	padding: 8px 10px;
+	margin-bottom: 15px;
+	font-size: 0.8rem;
+	border-radius: 4px;
+}
+
+.backButton {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+	width: 48px;
+	height: 48px;
+	background-color: transparent;
+	border: none;
+	color: #e0c58f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	z-index: 100;
+	padding: 0;
+}
+
+.backButtonIcon {
+	font-size: 1.6rem;
+}
+
+.backButton:hover,
+.backButton:active {
+	color: #ffdb9e;
+	transform: scale(1.1);
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	font-size: 1.5rem;
+	color: #ffffff;
+	background-color: #041528;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.authContainer {
+		flex-direction: column;
+		min-height: auto;
+		gap: 20px;
+		align-items: center;
+	}
+
+	.leftBox {
+		width: 100%;
+		max-width: 350px;
+		padding: 20px;
+		min-height: 260px;
+	}
+
+	.rightBox {
+		width: 100%;
+		max-width: 350px;
+		padding: 20px;
+		min-height: auto;
+	}
+
+	.logo {
+		width: 180px;
+	}
+
+	.brandName {
+		font-size: 2.2rem;
+		margin-bottom: 10px;
+	}
+
+	.rowContainer {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.backButton {
+		bottom: 15px;
+		left: 15px;
+		width: 40px;
+		height: 40px;
+	}
+
+	.backButtonIcon {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.backButton {
+		bottom: 10px;
+		left: 10px;
+		width: 36px;
+		height: 36px;
+	}
+
+	.backButtonIcon {
+		font-size: 1.2rem;
+	}
+}
+
+.divider {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 15px 0;
+	color: #ffffff;
+}
+
+.divider::before,
+.divider::after {
+	content: '';
+	flex: 1;
+	border-bottom: 1px solid rgba(224, 197, 143, 0.3);
+}
+
+.divider::before {
+	margin-right: 10px;
+}
+
+.divider::after {
+	margin-left: 10px;
+}
+
+.dividerText {
+	font-size: 0.8rem;
+	color: #e0c58f;
+}

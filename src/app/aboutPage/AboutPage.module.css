@@ -1,0 +1,798 @@
+/* AboutPage.module.css */
+
+/* Main layout containers */
+.body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI Emoji';
+  margin: 0;
+  padding: 0;
+  background: #0B1532;
+  color: #f5f0e9;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  outline: none;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: #0a1128;
+  border-bottom: 1px solid #000000;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.headerLeft {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headerMid {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+/* Search bar styles */
+.searchContainer {
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.searchIcon {
+  position: relative;
+  left: 1rem;
+  color: #8b9cb3;
+  z-index: 1;
+}
+
+.searchInput {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 3.125rem;
+  border: none;
+  padding: 0 1.25rem 0 2.5rem;
+  background: #1E2B48;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.searchInput::placeholder {
+  color: #8b9cb3;
+}
+
+.searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.headerRight {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Header icons and profile dropdown styles */
+.headerIcon {
+  color: #f5f0e9;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon:hover {
+  opacity: 0.8;
+}
+
+.profileContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  background-color: #1E2B48;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdownItem span {
+  color: #f5f0e9;
+  font-size: 0.95rem;
+}
+
+.dropdownItem span:first-child {
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+/* Main content styles */
+.main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
+.mainContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+/* Left navigation panel */
+.mainLeft {
+  width: 20%;
+  height: 100%;
+  background-color: #0a1128;
+  border-right: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.mainLeftUp {
+  width: 100%;
+  height: 40%;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Enhanced navigation items */
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.navItem:active {
+  transform: translateY(0);
+}
+
+/* Navigation item icon styling */
+.navIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+}
+
+/* Navigation item text styling */
+.navText {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mainLeftBottom {
+  width: 100%;
+  height: 60%;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* About page specific styles */
+.rightBox {
+  width: 80%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 64, 128, 0) 0%,      /* transparent for image visibility */
+      rgba(0, 64, 128, 1) 30%,     /* solid blue blend */
+      #001f3f 60%,                 /* darker blue */
+      #000000 100%                 /* black at bottom */
+    ),
+    url('/images/background.jpg') no-repeat top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* Remove ::before and ::after from .rightBox */
+.rightBox::before,
+.rightBox::after {
+  display: none !important;
+}
+
+/* Styling for webkit browsers (Chrome, Safari, Edge) */
+.rightBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rightBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rightBox::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* Content wrapper to ensure content is above the background layers */
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Splash section styling */
+.logoImage {
+  width: 520px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 70px rgba(255, 215, 0, 0.9));
+  position: relative;
+  z-index: 2;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 45px rgba(255, 215, 0, 0.7));
+  }
+  to {
+    filter: drop-shadow(0 0 90px rgba(255, 215, 0, 1));
+  }
+}
+
+.brandName {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 0;
+  font-family: 'Segoe Script', cursive, 'Segoe UI', sans-serif;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+/* Content sections styling */
+.contentSection {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  min-height: 40vh;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+.contentSection:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+
+.sectionLeft {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.sectionRight {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: #FFE8A3;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 232, 163, 0.3);
+  position: relative;
+  border: none;
+}
+
+.sectionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5f0e9;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sectionImage {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.sectionImage:hover {
+  transform: scale(1.02);
+}
+
+/* Contact section */
+.contactSection {
+  padding: 2rem;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+  border: none;
+  box-shadow: none;
+}
+
+.contactTitle {
+  font-size: 1.8rem;
+  color: #FFE8A3;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contactEmail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #f5f0e9;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  display: inline-flex;
+  transition: background-color 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contactEmail:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.emailIcon {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  color: #FFE8A3;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.footerLogoImg {
+  width: 45px !important;
+  height: auto !important;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+.footerBrandName {
+  font-size: 1.5rem;
+  font-family: 'Segoe Script', cursive;
+  color: #FFE8A3;
+  text-shadow: 0 0 8px rgba(255, 232, 163, 0.3);
+}
+
+.footerDeveloper {
+  font-size: 0.9rem;
+  color: #8b9cb3;
+  margin-top: 0.75rem;
+}
+
+/* Footer styles */
+.footerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+.footerColLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #f5f0e9;
+}
+
+.footerColCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+}
+
+.footerSeparator {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(180deg, #FFE8A3 0%, #f5f0e9 100%);
+  border-radius: 2px;
+  margin: 0 1.5rem;
+}
+
+.footerColRight {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #FFE8A3;
+  font-family: 'Segoe Script', cursive;
+  margin-left: 0;
+}
+
+.footerRightStack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.footerBy {
+  color: #8b9cb3;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+}
+
+.footerLeftStack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.footerContactLabel {
+  font-size: 1.1rem;
+  color: #FFE8A3;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .mainLeft {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #1e3a8a;
+  }
+
+  .mainLeftUp {
+    flex-direction: row;
+    height: auto;
+    justify-content: space-around;
+  }
+
+  .navItem {
+    width: auto;
+    margin: 0 0.5rem;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+  }
+
+  .mainLeftBottom {
+    display: none;
+  }
+
+  .rightBox {
+    width: 100%;
+    height: calc(90vh - 60px);
+  }
+
+  .contentSection {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .sectionLeft, .sectionRight {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .contentWrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 70px;
+    height: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .headerContainer {
+    min-height: 70px;
+    padding: 0.5rem 0.5rem 0.5rem 3.5rem; /* leave space for burger */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  .headerLeft {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .headerRight {
+    min-width: 0;
+    width: auto;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .brandName {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .logoImage {
+    width: 120px;
+    margin-bottom: 0.5rem;
+  }
+  .contentSection {
+    flex-direction: column;
+    padding: 1.2rem 0.5rem;
+    min-height: unset;
+    margin-bottom: 1.2rem;
+    gap: 1rem;
+  }
+  .sectionLeft, .sectionRight {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .sectionImage {
+    max-width: 90vw;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+  .contactSection {
+    padding: 1.2rem 0.5rem;
+    margin-top: 1.2rem;
+  }
+  .contactEmail {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footerRow {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0 0.5rem 0;
+    align-items: center;
+  }
+  .footerColCenter {
+    display: none;
+  }
+  .footerColLeft, .footerColRight {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .footerLogo {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .footerLogoImg {
+    width: 35px !important;
+    height: auto !important;
+  }
+  .footerBrandName {
+    font-size: 1.1rem;
+  }
+  .footerBy {
+    font-size: 0.95rem;
+  }
+  .footerRightStack, .footerLeftStack {
+    align-items: center;
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerRow {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0 0.5rem 0;
+  }
+  .footerColCenter {
+    display: none;
+  }
+  .footerColLeft, .footerColRight {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.contentSection:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.fadeInOnScroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fadeInOnScroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeInOnScroll.fadeOut {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Burger menu button for mobile */
+.hamburgerMenu {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  display: block;
+  font-size: 2.2rem;
+  color: #FFE8A3;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 48px;
+  min-height: 48px;
+  line-height: 1;
+}
+
+.hamburgerMenu:active,
+.hamburgerMenu:focus {
+  background: rgba(255, 232, 163, 0.08);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 70px;
+    height: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .headerContainer {
+    min-height: 70px;
+    padding: 0.5rem 0.5rem 0.5rem 3.5rem; /* leave space for burger */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  .headerLeft {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .headerRight {
+    min-width: 0;
+    width: auto;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
